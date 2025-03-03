@@ -10,6 +10,7 @@ A **real-time cryptocurrency price tracker** built with **Next.js**, **React Que
  - **State management** with **React Query** for caching  
  - **Fully responsive UI** built with **TailwindCSS v4**  
  - **Developer documentation** powered by **Docusaurus**  
+ - Clicking on a cryptocurrency displays a **Graph of 1 week's performance** built with **react-chartjs2**
 
 ---
 
