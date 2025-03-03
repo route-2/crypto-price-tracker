@@ -1,2 +1,24 @@
 @import "tailwindcss";
 
+/* Ensure smooth dark mode transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Ensures dark mode is applied correctly */
+:root {
+  --background-light: #ffffff;
+  --background-dark: #0f172a;
+  --text-light: #1f2937;
+  --text-dark: #e5e7eb;
+}
+
+html.dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+html.light {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}

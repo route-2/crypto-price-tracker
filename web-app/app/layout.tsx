@@ -18,7 +18,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-gray-100 text-gray-900`}>
+      <body className={`${inter.variable} bg-black text-gray-900`}>
         <QueryProvider>{children}</QueryProvider> 
       </body>
     </html>

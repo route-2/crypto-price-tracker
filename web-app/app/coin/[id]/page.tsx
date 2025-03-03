@@ -6,10 +6,10 @@ import axios from "axios";
 import { Line } from "react-chartjs-2";
 import { CategoryScale, Chart as ChartJS, LineElement, LinearScale, PointElement, Tooltip } from "chart.js";
 
-// Register Chart.js components
+
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
 
-// Type definition
+
 interface CoinData {
   id: string;
   name: string;
