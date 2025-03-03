@@ -6,6 +6,7 @@ A **real-time cryptocurrency price tracker** built with **Next.js**, **React Que
  - Live **cryptocurrency prices** fetched from **CoinGecko API**  
  - **Search functionality** to filter cryptocurrencies  
  - **Manual refresh button** to fetch updated prices  
+ - **Filters top 5** based on Market Cap, ATH (All-time-high), and 24H volume.
  - **State management** with **React Query** for caching  
  - **Fully responsive UI** built with **TailwindCSS v4**  
  - **Developer documentation** powered by **Docusaurus**  
