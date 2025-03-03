@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
 import { CategoryScale, Chart as ChartJS, LineElement, LinearScale, PointElement, Tooltip } from "chart.js";
@@ -20,6 +20,7 @@ interface CoinData {
 
 export default function CoinPage() {
   const { id } = useParams();
+  const router = useRouter();
   const [coinData, setCoinData] = useState<CoinData | null>(null);
   const [chartData, setChartData] = useState<{ labels: string[]; datasets: any[] }>({
     labels: [],
@@ -83,6 +84,12 @@ export default function CoinPage() {
 
   return (
     <div className="container mx-auto p-6 min-h-screen bg-gray-900 text-white">
+      <button 
+        onClick={() => router.push("/")}
+        className="mb-6 px-4 py-2  hover:bg-gray-600 text-white font-semibold rounded-md"
+      >
+        ← 
+      </button>
       <div className="flex items-center gap-4 mb-6">
         <img src={coinData.image.large} alt={coinData.name} className="w-16 h-16" />
         <h1 className="text-3xl font-bold">{coinData.name} ({coinData.symbol.toUpperCase()})</h1>
