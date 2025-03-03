@@ -72,7 +72,14 @@ export default function CoinPage() {
     fetchChartData();
   }, [id]);
 
-  if (!coinData) return <p className="text-center text-gray-500">Loading...</p>;
+  if (!coinData) return (
+    <div className="flex flex-col justify-center items-center h-40 space-y-2">
+      <div className="w-8 h-8 border-4 border-gray-200 border-t-gray-500 rounded-full animate-spin"></div>
+      <p className="text-gray-100 animate-pulse">Fetching the latest crypto data...</p>
+    </div>
+  );
+  
+  
 
   return (
     <div className="container mx-auto p-6 min-h-screen bg-gray-900 text-white">

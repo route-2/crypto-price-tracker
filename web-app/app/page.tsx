@@ -89,9 +89,26 @@ function CryptoTracker() {
               </>
             )}
           </Button>
-
-        {isLoading && (
-          <div className="space-y-3">{[...Array(5)].map((_, i) => <Skeleton key={i} className="h-10 w-full" />)}</div>
+          {isLoading && (
+          <div className="space-y-4">
+            {[...Array(5)].map((_, i) => (
+              <Card key={i} className="border border-gray-200 dark:border-gray-800 p-4 animate-pulse">
+                <CardContent className="flex justify-between items-center">
+                  <div className="flex items-center gap-4">
+                    <Skeleton className="h-10 w-10 rounded-full" />
+                    <div className="space-y-2">
+                      <Skeleton className="h-4 w-32" />
+                      <Skeleton className="h-3 w-24" />
+                    </div>
+                  </div>
+                  <div className="text-right space-y-2">
+                    <Skeleton className="h-4 w-20" />
+                    <Skeleton className="h-3 w-16" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         )}
 
         {isError && <p className="text-red-600 text-center">Error fetching data. Try again later.</p>}
